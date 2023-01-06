@@ -1,14 +1,18 @@
-
+import { useState } from "react";
 import ListCard from "./ListCard/ListCard";
 import "./todoLists.css"
 import { ReactSortable } from "react-sortablejs";
 import TodoBottomTabs from "./TodoBottomTabs/TodoBottomTabs";
 import Axios from "../../../axios-todos"
+import BackDrop from "../../Backdrop/Backdrop"
 
 
 
 
 const TodoLists = (props) => {
+
+    const [open, setOpen] = useState(false);
+
 
    let itemListed= "";
 
@@ -47,9 +51,12 @@ const TodoLists = (props) => {
 
     const clearHandler = () => {
 
+            setOpen(true);
+
          Axios.delete("/")
-            .then(response => { 
+            .then(response => {
                  window.location.reload();
+                
             })
             .catch(error => { alert("handlesubmit error for blog ", error)});
 
@@ -59,8 +66,9 @@ const TodoLists = (props) => {
     return (
         <>
             <div className="todoList-container"> 
-
-        
+                <BackDrop
+                    open={open}
+                 />
                 <ReactSortable list={props.todoLists} setList={props.setList}>
                 
                    {props.todoLists.map((item) => {

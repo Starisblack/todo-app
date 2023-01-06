@@ -112,18 +112,12 @@ const TodoContainer = (props) => {
         if(todoFilter === "All"){
             return todoList;
           } else if (todoFilter === "Completed"){
-                return todoList.filter(item => (item.completed === true))
-              } else if (todoFilter === "Active"){
-                  return todoList.filter(item => ( item.completed === false))
-              }
+            return todoList.filter(item => (item.completed === true))
+          } else if (todoFilter === "Active"){
+            return todoList.filter(item => ( item.completed === false))
+         }
 
     }
-
-
-
-
-
-
 
 
     return (

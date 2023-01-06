@@ -49,9 +49,9 @@
     display: none;
   }
   
-  .item input[type="checkbox"]:hover{
+  /* .item input[type="checkbox"]:hover{
     background-color: #a5a5a5;
-  }
+  } */
 
   .item input[type="checkbox"]:checked{
     background: linear-gradient(128deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 90%);
@@ -98,7 +98,11 @@
 @media screen and (max-width: 450px) {
   .list-card p {
     padding: 0.7rem;
-    font-size: 1rem;
-   
-}
+    font-size: 1rem;  
+  }
+  .item input[type="checkbox"] {
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-right: 0.5rem;
+  }
 }

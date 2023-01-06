@@ -3,11 +3,7 @@ import "./inputBox.css"
 
 import { motion } from "framer-motion";
 
-
-
 const InputBox = (props) => {
-
-      
 
    return (
    <div className="input-group">
