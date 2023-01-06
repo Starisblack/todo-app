@@ -1,0 +1,75 @@
+
+.input-group{
+    margin: 1.5rem 0;
+    background-color: #fff;
+    padding: .8rem 1.2rem;
+    border-radius: .25rem;
+    align-items: center;
+    box-shadow: 5px 5px 15px -5px rgb(0 0 0 / 30%);
+}
+
+
+.form-check-input {
+    background-color: transparent;
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+
+.input-group-text {
+    background-color: transparent;
+    border: none;
+}
+
+.form-control{
+    border: none;
+    background-color: transparent;
+}
+
+.form-control:focus {
+    border-color: transparent;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.error{
+    color: red;
+    padding: 0 20px;
+}
+
+.send-icon{
+    cursor: pointer;
+}
+
+
+/* dark mode styling */
+
+
+.dark .input-group{
+    background-color: hsl(235, 24%, 19%);
+    
+}
+
+.dark .error{
+    color: red;
+    
+}
+
+.dark .form-control{
+    color: white;
+}
+
+.dark .form-check-input{
+    border: 1px solid hsl(234, 11%, 52%);
+}
+
+
+@media screen and (max-width: 450px) {
+   .input-group {
+        margin: 1rem 0;
+        padding: 0.6rem 1rem;
+    }
+  .error{
+    font-size: .8rem;
+  }
+}

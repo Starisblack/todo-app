@@ -1,0 +1,69 @@
+
+
+.todoList-container, .mobile-view {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgb(0 0 0 / 30%);
+}
+
+.bottom-container{
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+
+.bottom-container p, .clear-btn {
+   padding: 0.6rem;
+   font-size: 1rem;
+}
+
+
+
+.clear-btn{
+    cursor: pointer;
+    background: transparent;
+    color: #ccc;
+    border: none;
+}
+
+.clear-btn:hover{
+    color: black;
+    font-weight: 400;
+}
+
+.mobile-view{
+    display: none;
+}
+
+
+
+.dark .todoList-container, .dark .mobile-view {
+
+    background-color: hsl(235, 24%, 19%);
+    color: white;
+}
+
+.dark .form-check-input{
+    border: 1px solid hsl(234, 11%, 52%);
+}
+
+
+.dark .clear-btn:hover{
+    color: white;
+}
+
+
+@media screen and (max-width: 661px) {
+
+    .desktop-view{
+        display: none;
+    }
+
+    .mobile-view{
+        display: block;
+        margin-top: 20px;
+        padding: 0 3rem;
+    }
+
+    
+}

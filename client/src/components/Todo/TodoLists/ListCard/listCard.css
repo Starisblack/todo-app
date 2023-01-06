@@ -1,0 +1,104 @@
+
+ .item, .todo-title {
+    display: flex;
+    align-items: center;
+
+  }
+
+
+.item {
+    position: relative;
+    min-height: 50px;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  .list-card{
+    cursor: move;
+    border-bottom: 1px solid hsl(233, 11%, 84%);
+
+  }
+
+
+  
+  
+
+ 
+
+/* styling for custom checkbox when checked... starts */
+
+.item input[type="checkbox"] {
+    display: flex;
+    height: 1.2rem;
+    width: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,.25);
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;  
+    outline: none;
+  }
+
+  .item input[type="checkbox"]::after{
+    content: url(../../../../assets/images/icon-check.svg);
+    font-weight: 700;
+    display: none;
+  }
+  
+  .item input[type="checkbox"]:hover{
+    background-color: #a5a5a5;
+  }
+
+  .item input[type="checkbox"]:checked{
+    background: linear-gradient(128deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 90%);
+  }
+
+  .item input[type="checkbox"]:checked::after{
+    display: block;
+  }
+
+  /* styling for custom checkbox when checked... ends */
+
+  
+  input:checked+p {
+    text-decoration: line-through;
+    text-decoration-color: hsl(236, 9%, 61%);
+    color: hsl(236, 9%, 61%) ;
+  }
+  
+
+  
+  .list-card p {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.2rem;
+  } 
+
+
+  /* dark mode */
+
+.dark .list-card{
+  border-bottom: 1px solid hsl(233, 14%, 35%);
+}
+
+
+.dark .item input[type="checkbox"]{
+    border: 1px solid hsl(234, 11%, 52%);
+}
+
+.dark p{
+    color: #fff;
+}
+
+
+@media screen and (max-width: 450px) {
+  .list-card p {
+    padding: 0.7rem;
+    font-size: 1rem;
+   
+}
+}

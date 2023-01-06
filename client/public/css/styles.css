@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    
+}
+
+p {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: black;
+  } 
+
+
+.dark {
+    background-color: hsl(235, 21%, 11%);
+    color: white;
+}
